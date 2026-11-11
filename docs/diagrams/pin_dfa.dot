@@ -1,0 +1,30 @@
+digraph DFA {
+  rankdir=LR;
+  bgcolor="white";
+  node [fontname="Helvetica", fontsize=11, style=filled, fillcolor="#FFFFFF", color="#1F3A5F", fontcolor="#12263A"];
+  edge [fontname="Helvetica", fontsize=10, color="#5B6B7C", fontcolor="#33475B"];
+  nstart [shape=point, width=0.12, color="#1F3A5F"];
+  n0 [label="q0", shape=circle];
+  n1 [label="q1", shape=circle];
+  n2 [label="q2", shape=circle];
+  n3 [label="q3", shape=circle];
+  n4 [label="q4", shape=doublecircle];
+  n5 [label="q5", shape=circle];
+  n6 [label="q6", shape=doublecircle];
+  n7 [label="qd", shape=circle, style="filled,dashed", fontcolor="#7A8794"];
+  nstart -> n0;
+  n0 -> n1 [label="0-9"];
+  n0 -> n7 [label="non-digit", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+  n1 -> n2 [label="0-9"];
+  n1 -> n7 [label="non-digit", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+  n2 -> n3 [label="0-9"];
+  n2 -> n7 [label="non-digit", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+  n3 -> n4 [label="0-9"];
+  n3 -> n7 [label="non-digit", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+  n4 -> n5 [label="0-9"];
+  n4 -> n7 [label="non-digit", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+  n5 -> n6 [label="0-9"];
+  n5 -> n7 [label="non-digit", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+  n6 -> n7 [label="Σ", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+  n7 -> n7 [label="Σ", style=dashed, color="#A8B3BF", fontcolor="#7A8794"];
+}

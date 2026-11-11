@@ -1,0 +1,20 @@
+digraph DFA {
+  rankdir=LR; bgcolor="white"; pad=0.2; nodesep=0.45; ranksep=0.55;
+  node [fontname="Helvetica", fontsize=12, style=filled, fillcolor="#F4F7FB", color="#1F3A5F", penwidth=1.3];
+  edge [fontname="Helvetica", fontsize=10, color="#5B6B7F", arrowsize=0.7];
+  __start [shape=point, width=0.12, color="#1F3A5F"];
+  "q0" [shape=circle, fillcolor="#F4F7FB"];
+  "q1" [shape=circle, fillcolor="#F4F7FB"];
+  "q2" [shape=circle, fillcolor="#F4F7FB"];
+  "q3" [shape=circle, fillcolor="#F4F7FB"];
+  "q4" [shape=doublecircle, fillcolor="#F4F7FB"];
+  "q5" [shape=circle, fillcolor="#F4F7FB"];
+  "q6" [shape=doublecircle, fillcolor="#F4F7FB"];
+  __start -> "q0";
+  "q0" -> "q1" [label="digit"];
+  "q1" -> "q2" [label="digit"];
+  "q2" -> "q3" [label="digit"];
+  "q3" -> "q4" [label="digit"];
+  "q4" -> "q5" [label="digit"];
+  "q5" -> "q6" [label="digit"];
+}
